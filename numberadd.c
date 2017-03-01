@@ -1,10 +1,10 @@
 #include<stdio.h>
-main()
+main(int argc, char *argv[])
 {
     int a, sum = 0;
 
     FILE *filein;
-    filein = fopen("numbers.txt", "r"); /* opens and reads file */ 
+    filein = fopen(argv[1], "r"); /* opens and reads file */ 
    
     while(fscanf(filein, "%d", &a) == 1) 
     {
@@ -13,6 +13,6 @@ main()
 
     fclose(filein);
    
-    printf("Number total from file: %d", sum);
+    printf("Number total from file: %d\n", sum);
     return 0; 
 }
