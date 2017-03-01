@@ -5,6 +5,10 @@ main(int argc, char *argv[])
 
     FILE *filein;
     filein = fopen(argv[1], "r"); /* opens and reads file */ 
+      if(argc != 2)
+      {
+          perror("Error, please enter valid file name \n")
+      }
    
     while(fscanf(filein, "%d", &a) == 1) 
     {
