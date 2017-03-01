@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 int main(int argc, char *argv[])
 {
@@ -5,15 +6,16 @@ int main(int argc, char *argv[])
   
   if(argc != 2) /* if argc doesnt have atlest 2 arguments not a file */
     {
-      printf("Error: Please enter valid file name \n"); 
+      perror("Error: Please enter valid file name \n"); 
       return 1;
     }
+
   FILE *filein;
   filein = fopen(argv[1], "r"); /* opens and reads file */
   
   if(filein == NULL)
     {
-      printf("Error: File does not exist \n");
+      perror("Error: \n");
       return 1;
     }
   while(fscanf(filein, "%d", &a) == 1)
