@@ -11,7 +11,7 @@ int read_numb(const char *file_name)
 
   if(filein == NULL)
     {
-      perror("Error: \n");
+      perror("Error reading file");
       exit(1);
     }
 
