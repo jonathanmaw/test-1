@@ -1,30 +1,30 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-#include<stdio.h>
-int main(int argc, char *argv[])
+int read_numb (const char*  file_name)
 {
-  int a, sum = 0;
-  
-  if(argc != 2) /* if argc doesnt have atlest 2 arguments not a file */
-    {
-      perror("Error: Please enter valid file name \n"); 
-      return 1;
-    }
-
-  FILE *filein;
-  filein = fopen(argv[1], "r"); /* opens and reads file */
-  
+  FILE* filein;
+  filein = fopen(file_name, "r"); /* opens file */
+  int i = 0;
+  int sum = 0;
   if(filein == NULL)
     {
       perror("Error: \n");
-      return 1;
-    }
-  while(fscanf(filein, "%d", &a) == 1)
-    {
-      sum += a;      /* adds sum of numbers */
+      exit(1);
     }
 
-  fclose(filein);
-   
+   while(fscanf(filein, "%d", &i) == 1)
+    {
+      sum += i; /* adds sum of numbers */
+    }
+
+  fclose (filein);
+  return sum;
+}
+int main(int argc, char *argv[])
+ {
+  int sum = read_numb(argv[1]);
   printf("Number total from file: %d\n", sum);
-  return 0; 
+  return 0;
 }
