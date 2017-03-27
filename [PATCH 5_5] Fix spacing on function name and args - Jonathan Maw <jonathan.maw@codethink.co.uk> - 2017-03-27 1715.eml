@@ -1,0 +1,35 @@
+Envelope-to: dominic.brown@codethink.co.uk
+Received: from 82-70-136-246.dsl.in-addr.zen.co.uk ([82.70.136.246] helo=fafnir.dyn.ducie.codethink.co.uk)
+	by imap1.codethink.co.uk with esmtpsa (Exim 4.84_2 #1 (Debian))
+	id 1csXIq-0006k7-JQ; Mon, 27 Mar 2017 17:15:32 +0100
+From: Jonathan Maw <jonathan.maw@codethink.co.uk>
+To: dominic.brown@codethink.co.uk
+Cc: Jonathan Maw <jonathan.maw@codethink.co.uk>
+Subject: [PATCH 5/5] Fix spacing on function name and args
+Date: Mon, 27 Mar 2017 17:15:21 +0100
+Message-Id: <1490631321-30201-6-git-send-email-jonathan.maw@codethink.co.uk>
+X-Mailer: git-send-email 2.1.4
+In-Reply-To: <1490631321-30201-1-git-send-email-jonathan.maw@codethink.co.uk>
+References: <1490631321-30201-1-git-send-email-jonathan.maw@codethink.co.uk>
+
+---
+ numberadd.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/numberadd.c b/numberadd.c
+index 18a1f89..463a468 100644
+--- a/numberadd.c
++++ b/numberadd.c
+@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
+ 	int sum = 0;
+ 	int opt;
+ 
+-	while ((opt = getopt (argc, argv, "a")) != -1)
++	while ((opt = getopt(argc, argv, "a")) != -1)
+ 	{
+ 		if (opt == 'a')
+ 		{
+-- 
+2.1.4
+
+
