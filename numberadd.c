@@ -15,7 +15,6 @@ int read_numb(const char *file_name, const int alternate)
 		exit(1);
 	}
 
-
 	while (fscanf(filein, "%d", &i) == 1)
 	{
 		sum += i; /* adds sum of numbers */
@@ -27,7 +26,6 @@ int read_numb(const char *file_name, const int alternate)
 		{
 			sum -= i;
 		}
-
 		else
 		{
 			sum += i;
@@ -37,7 +35,6 @@ int read_numb(const char *file_name, const int alternate)
 
 	fclose(filein);
 	return sum;
-
 }
 
 int main(int argc, char *argv[])
@@ -52,7 +49,6 @@ int main(int argc, char *argv[])
 		{
 			alternate = 1;
 		}
-
 		else
 		{
 			fprintf(stderr, "Usage: %s [-a] file\n", argv[0]);
