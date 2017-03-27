@@ -20,7 +20,7 @@ int read_numb(const char *file_name, const int alternate)
 		sum += i; /* adds sum of numbers */
 
 		if (fscanf(filein, "%d", &i) != 1)
-		break;
+			break;
 
 		if (alternate)
 		{
