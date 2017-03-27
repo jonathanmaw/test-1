@@ -9,18 +9,18 @@ int read_numb(const char *file_name, const int alternate)
 	int i = 0;
 	int sum = 0;
 	
-	if(filein == NULL)
+	if (filein == NULL)
 	{
 		perror("Error reading file");
 		exit(1);
 	}
 	
 	
-	while(fscanf(filein, "%d", &i) == 1)
+	while (fscanf(filein, "%d", &i) == 1)
 	{
 		sum += i; /* adds sum of numbers */
 		
-		if   (fscanf(filein, "%d", &i) != 1)
+		if (fscanf(filein, "%d", &i) != 1)
 		break;
 
 		if (alternate)
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 	
 	while ((opt = getopt (argc, argv, "a")) != -1)
 	{
-		if(opt == 'a')
+		if (opt == 'a')
 		{
 			alternate = 1;
 		}
