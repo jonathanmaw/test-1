@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int opt;
 
-	while ((opt = getopt (argc, argv, "a")) != -1)
+	while ((opt = getopt(argc, argv, "a")) != -1)
 	{
 		if (opt == 'a')
 		{
