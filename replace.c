@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -29,7 +28,7 @@ int main(int argc, char *argv[])
     while(fgets(replace, 100, filein) != NULL)
       {
 	start = replace;
-	end = start + strlen(replace) - 1;
+	end = start + strlen(replace) - 2;
 
 
 	while(end > start)
